@@ -17,6 +17,8 @@ const tools = ["audio", "youtube", "video"];
 const date = new Date().toISOString().slice(0, 10);
 const image = site + "/assets/social-card.png";
 // The operator already named on the about, contact, privacy and terms pages.
+// AGPL-3.0: the public site points to its source code.
+const repository = "https://github.com/trsdwill-glitch/transcriptoryt";
 const founder = { name: "Thiago Raul Solaeche Duarte",
   linkedin: "https://www.linkedin.com/in/thiago-raul-solaeche-duarte-8a3400265/" };
 const find = (key, lang) => pages.find(p => p.key === key && p.lang === lang);
@@ -75,7 +77,7 @@ function schema(page, trail) {
       url: site + "/", logo: site + "/assets/logo-512.png",
       // Official brand profiles. Add each new profile here so Google ties it to the site.
       sameAs: ["https://www.youtube.com/@transcriptoryt", "https://x.com/transcriptoryt_",
-        "https://bsky.app/profile/transcriptoryt.com"],
+        "https://bsky.app/profile/transcriptoryt.com", repository],
       founder: { "@type": "Person", "@id": site + "/#founder", name: founder.name, sameAs: [founder.linkedin] } });
   }
   if (tools.includes(page.key)) {
@@ -146,7 +148,8 @@ async function render(page) {
     toolScripts: tool ? `<script src="${asset("tool-copy.js")}" defer></script>\n  <script src="${asset("app.js")}" defer></script>` : "",
     styleHref: asset("style.css"), transcriberHref: asset("transcriber.css"),
     skip: es ? "Saltar al contenido" : "Skip to content", navLabel: es ? "Navegación principal" : "Main navigation",
-    primary: navigation([...tools, "about"]), footer: navigation([...tools, "about", "contact", "privacy", "terms"]),
+    primary: navigation([...tools, "about"]), footer: navigation([...tools, "about", "contact", "privacy", "terms"]) +
+      `\n<a href="${repository}" rel="noopener">${es ? "Código fuente" : "Source code"}</a>`,
     footerLabel: es ? "Pie de página" : "Footer", mainClass: tool ? "dashboard" : "prose",
     languages: `<div class="locale-switch" role="group" aria-label="${es ? "Idioma" : "Language"}">${switcher}</div>`,
     themeLabel: es ? "Cambiar tema" : "Toggle theme", dark: es ? "Usar tema oscuro" : "Use dark theme",
