@@ -1,0 +1,14 @@
+[Unit]
+Description=Check for a stable yt-dlp release without modifying the service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=transcriptor
+WorkingDirectory=/opt/transcriptor
+ExecStart=/bin/sh /opt/transcriptor/deploy/update_ytdlp.sh --check
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true

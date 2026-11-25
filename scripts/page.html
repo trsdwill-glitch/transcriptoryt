@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{lang}}"{{toolAttribute}}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  {{seoHead}}
+  <link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="{{styleHref}}">
+  <link rel="stylesheet" href="{{transcriberHref}}">
+  {{toolScripts}}
+</head>
+<body class="transcriber">
+  <a class="skip-link" href="#main">{{skip}}</a>
+  <header class="site-header"><div class="container">
+    <a class="brand" href="{{home}}"><img src="/assets/brand-mark.svg" width="32" height="32" alt="">transcriptoryt</a>
+    <nav class="main-nav" aria-label="{{navLabel}}">{{primary}}</nav>
+    <div class="header-actions">
+      {{languages}}
+      <button id="theme-toggle" class="theme-toggle" aria-label="{{themeLabel}}" data-switch-dark="{{dark}}" data-switch-light="{{light}}" type="button">
+        <svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
+      </button>
+    </div>
+  </div></header>
+  <main id="main" tabindex="-1" class="container {{mainClass}}">
+    {{breadcrumb}}
+    {{body}}
+  </main>
+  <footer class="site-footer"><nav class="container" aria-label="{{footerLabel}}">{{footer}}</nav></footer>
+</body>
+</html>

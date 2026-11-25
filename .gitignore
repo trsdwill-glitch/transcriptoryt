@@ -1,0 +1,19 @@
+.env
+.env.*
+!.env.example
+.venv/
+data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+static/assets/vendor/
+dist/
+.tools/
+deploy/youtube-urls.txt
+youtube-report.json
+# Internal planning notes; not part of the public source.
+docs/referencias/

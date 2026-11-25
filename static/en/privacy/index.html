@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Privacy policy | transcriptoryt</title>
+  <meta name="description" content="How transcriptoryt handles audio, transcripts, cookies, device processing and server transcription providers.">
+  <link rel="canonical" href="https://transcriptoryt.com/en/privacy/">
+  <link rel="alternate" hreflang="es" href="https://transcriptoryt.com/privacidad/">
+  <link rel="alternate" hreflang="en" href="https://transcriptoryt.com/en/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://transcriptoryt.com/privacidad/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="transcriptoryt">
+  <meta property="og:title" content="Privacy policy | transcriptoryt">
+  <meta property="og:description" content="How transcriptoryt handles audio, transcripts, cookies, device processing and server transcription providers.">
+  <meta property="og:url" content="https://transcriptoryt.com/en/privacy/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="transcriptoryt · Audio and video to text">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy policy | transcriptoryt">
+  <meta name="twitter:description" content="How transcriptoryt handles audio, transcripts, cookies, device processing and server transcription providers.">
+  <meta name="twitter:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta name="twitter:image:alt" content="transcriptoryt · Audio and video to text">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://transcriptoryt.com/en/"},{"@type":"ListItem","position":2,"name":"Privacy","item":"https://transcriptoryt.com/en/privacy/"}]}]}</script>
+  <link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/style.css?v=57e1364988">
+  <link rel="stylesheet" href="/assets/transcriber.css?v=571b507055">
+  
+</head>
+<body class="transcriber">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container">
+    <a class="brand" href="/en/"><img src="/assets/brand-mark.svg" width="32" height="32" alt="">transcriptoryt</a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/en/">Audio to text</a>
+<a href="/youtube-a-texto/" hreflang="es">YouTube to text (Spanish)</a>
+<a href="/video-a-texto/" hreflang="es">Video to text (Spanish)</a>
+<a href="/en/about/">About</a></nav>
+    <div class="header-actions">
+      <div class="locale-switch" role="group" aria-label="Language"><a lang="es" hreflang="es" href="/privacidad/" aria-label="Español">ES</a><a lang="en" hreflang="en" href="/en/privacy/" aria-label="English" aria-current="page">EN</a></div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-switch-dark="Use dark theme" data-switch-light="Use light theme" type="button">
+        <svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
+      </button>
+    </div>
+  </div></header>
+  <main id="main" tabindex="-1" class="container prose">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li aria-current="page">Privacy</li></ol></nav>
+    <h1>Privacy policy</h1>
+    <p class="hint">Last updated: 2026-11-22</p>
+    <p>transcriptoryt at transcriptoryt.com is operated by Thiago Raul Solaeche Duarte, Fernando de la Mora, Paraguay. For privacy questions, write to <a href="mailto:trsdwill@gmail.com">trsdwill@gmail.com</a>.</p>
+    <h2>Choose where your audio is processed</h2>
+    <p><strong>On this device:</strong> your selected audio and transcript are processed in your browser. The tool does not upload that audio or transcript to our server or a transcription provider, and it does not charge server minutes. The model files are downloaded from Hugging Face when needed and may remain in your browser's cache. Those downloads reveal connection information such as your IP address to the model host; see <a href="https://huggingface.co/privacy" rel="external noopener">Hugging Face's privacy policy</a>. Visiting this website still sends ordinary requests to our web server, including requests for configuration and quota.</p>
+    <p><strong>Server:</strong> uploaded files and links are sent to our server. For a link, the server contacts the media host to obtain the audio. The server converts the audio and sends audio chunks to Groq for transcription. Groq processes the audio and returns transcript text. Do not use server mode for material you are not authorized to share with these services.</p>
+    <h2>What the service handles</h2>
+    <ul>
+      <li>Server mode handles your uploaded file or media URL, file name or media title, duration, selected language and format, and the resulting transcript.</li>
+      <li>A signed <code>tid</code> cookie identifies a browser without an account. Its expiry is refreshed to one year with site requests; it is HttpOnly, SameSite=Lax and Secure over the production HTTPS connection.</li>
+      <li>To enforce server quotas, the browser sends a hashed device signal derived from browser type, language, timezone, screen dimensions, color depth and CPU concurrency. The server stores salted hashes of this signal, the cookie identifier and the IP address (an IPv6 /64 block), along with usage timestamps and audio duration. Hashing does not make these records anonymous.</li>
+      <li>The application briefly holds IP addresses in memory for request limits: one minute for API requests and one hour for job creation. Your connection IP is also visible to the hosting/network services that deliver the site.</li>
+      <li>Theme and interface options are saved in browser local storage. They do not include your audio or transcript. Downloaded model files may be kept in the browser's cache.</li>
+    </ul>
+    <h2>Why and for how long</h2>
+    <p>We use these data to provide transcription, deliver downloads, apply fair-use limits and protect the service. We do not use submitted audio or transcripts to train our own models.</p>
+    <p>On the server, temporary audio is removed when a job finishes, fails or is cancelled. After an interruption, leftover uploads are removed when the app starts again. Results are normally downloadable for one hour after completion; requests after expiry are refused. A periodic cleanup runs about every five minutes, so physical deletion can follow expiry by that interval. A restart can end download availability earlier. File names, source URLs and job status remain in application memory until the job record is swept after approximately 25 hours or the process restarts.</p>
+    <p>Usage hashes and reservation records expire after 25 hours and are deleted by the periodic cleanup. Aggregate daily budget totals are retained through the third day after their UTC date and removed by a later cleanup. Application logs are limited to operational metadata and error codes and are configured to exclude audio, transcript content, full media URLs and API credentials.</p>
+    <p>On your device, closing or reloading the page releases the tool's working copy. Files you downloaded, browser caches and local preferences remain under your control. Clearing this site's storage removes its preferences and cached model files, and may require downloading the model again. Clearing the cookie does not necessarily reset a server quota.</p>
+    <h2>Providers and external requests</h2>
+    <p>Our hosting provider delivers the website and processes server files. Groq is the configured server transcription provider. Its <a href="https://console.groq.com/docs/your-data" rel="external noopener">data policy</a> describes usage metadata and possible temporary retention for reliability or abuse monitoring. Our local deletion schedule does not control a provider's retention. External media hosts receive the server's requests when you submit a link. These providers may process information in other countries.</p>
+    <p>This version does not load advertising, analytics or advertising-blocker scripts. Any future addition requires an updated notice and any consent controls required for the regions served.</p>
+    <h2>Your choices and requests</h2>
+    <p>Use On this device to keep the selected audio out of server transcription. You can cancel an active job, clear site storage in browser settings, or stop using the service. Blocking the identification cookie can prevent server features from working correctly. The service has no separate handling for Do Not Track signals; it does not currently load advertising or analytics trackers.</p>
+    <p>Depending on the law that applies to you, you may have rights to access, correct, delete, restrict or object to processing, or to complain to a supervisory authority. Send requests to <a href="mailto:trsdwill@gmail.com">trsdwill@gmail.com</a>. Include the approximate job time and the kind of request; do not email confidential audio or a full transcript. We may need enough information to identify the relevant records. Emails you send are handled by the operator's email service to respond to your request.</p>
+    <p>This tool is intended for a general audience and is not directed at children under 13. Do not submit children's personal information without the authority and permissions required by applicable law.</p>
+
+  </main>
+  <footer class="site-footer"><nav class="container" aria-label="Footer"><a href="/en/">Audio to text</a>
+<a href="/youtube-a-texto/" hreflang="es">YouTube to text (Spanish)</a>
+<a href="/video-a-texto/" hreflang="es">Video to text (Spanish)</a>
+<a href="/en/about/">About</a>
+<a href="/en/contact/">Contact</a>
+<a href="/en/privacy/" aria-current="page">Privacy</a>
+<a href="/en/terms/">Terms</a></nav></footer>
+</body>
+</html>

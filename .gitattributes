@@ -1,0 +1,6 @@
+# Keep LF in the repository and on checkout: the shell scripts and configs run on Linux.
+* text=auto eol=lf
+# Windows launchers need CRLF.
+*.cmd text eol=crlf
+*.png binary
+*.ttf binary

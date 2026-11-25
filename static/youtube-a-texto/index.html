@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es" data-tool="youtube">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Transcribir video de YouTube a texto gratis | transcriptoryt</title>
+  <meta name="description" content="Pega el enlace de un video de YouTube y obtén su transcripción en texto, incluso sin subtítulos. Descarga TXT, Word, SRT o VTT, sin registro.">
+  <link rel="canonical" href="https://transcriptoryt.com/youtube-a-texto/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="transcriptoryt">
+  <meta property="og:title" content="Transcribir video de YouTube a texto gratis | transcriptoryt">
+  <meta property="og:description" content="Pega el enlace de un video de YouTube y obtén su transcripción en texto, incluso sin subtítulos. Descarga TXT, Word, SRT o VTT, sin registro.">
+  <meta property="og:url" content="https://transcriptoryt.com/youtube-a-texto/">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="transcriptoryt · Audio y video a texto">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Transcribir video de YouTube a texto gratis | transcriptoryt">
+  <meta name="twitter:description" content="Pega el enlace de un video de YouTube y obtén su transcripción en texto, incluso sin subtítulos. Descarga TXT, Word, SRT o VTT, sin registro.">
+  <meta name="twitter:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta name="twitter:image:alt" content="transcriptoryt · Audio y video a texto">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"transcriptoryt: YouTube a texto","url":"https://transcriptoryt.com/youtube-a-texto/","inLanguage":"es","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":0,"priceCurrency":"USD"},"featureList":["Reconocimiento de voz en el navegador","Enlaces y archivos en el servidor","Descargas TXT, Markdown, DOCX, SRT y VTT","Marcas de tiempo"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://transcriptoryt.com/"},{"@type":"ListItem","position":2,"name":"YouTube a texto","item":"https://transcriptoryt.com/youtube-a-texto/"}]}]}</script>
+  <link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/style.css?v=57e1364988">
+  <link rel="stylesheet" href="/assets/transcriber.css?v=571b507055">
+  <script src="/assets/tool-copy.js?v=8185a587dd" defer></script>
+  <script src="/assets/app.js?v=1ff754557d" defer></script>
+</head>
+<body class="transcriber">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header"><div class="container">
+    <a class="brand" href="/"><img src="/assets/brand-mark.svg" width="32" height="32" alt="">transcriptoryt</a>
+    <nav class="main-nav" aria-label="Navegación principal"><a href="/">Audio a texto</a>
+<a href="/youtube-a-texto/" aria-current="page">YouTube a texto</a>
+<a href="/video-a-texto/">Video a texto</a>
+<a href="/acerca-de/">Acerca de</a></nav>
+    <div class="header-actions">
+      <div class="locale-switch" role="group" aria-label="Idioma"><a href="/en/" hreflang="en" aria-label="Inicio en inglés">EN · Inicio</a></div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema" data-switch-dark="Usar tema oscuro" data-switch-light="Usar tema claro" type="button">
+        <svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
+      </button>
+    </div>
+  </div></header>
+  <main id="main" tabindex="-1" class="container dashboard">
+    <nav class="breadcrumb" aria-label="Ruta de navegación"><ol><li><a href="/">Inicio</a></li><li aria-current="page">YouTube a texto</li></ol></nav>
+    <div class="hero"><h1>Transcribir video de YouTube a texto</h1><p>Para transcribir un video de YouTube a texto, pega su enlace y elige un formato de descarga. El servidor reconoce las palabras de la pista de audio, incluso cuando el video no tiene subtítulos.</p></div>
+<section class="tool-card" aria-labelledby="tool-heading">
+      <div class="tool-top">
+        <h2 class="sr-only" id="tool-heading" data-i18n="toolTitle">Transcribir un video de YouTube</h2>
+        <div class="mode-switch" role="group" data-i18n-label="modeLabel" aria-label="Modo de transcripción" hidden>
+          <button class="secondary" type="button" data-mode="server" aria-pressed="true" data-i18n="modeServer">Servidor</button>
+          <button class="secondary" type="button" data-mode="local" aria-pressed="false" data-i18n="modeLocal">En este dispositivo</button>
+        </div>
+        <p class="quota" id="quota" aria-live="polite" data-i18n="quotaLoading">Consultando los minutos disponibles…</p>
+      </div>
+
+      <form id="job-form" class="job-form" novalidate>
+        <div class="input-grid" id="link-entries">
+          <div class="link-entry">
+            <label for="source-1" data-i18n="sourceLabel">Enlace del video de YouTube</label>
+            <div class="input-line">
+              <input id="source-1" type="url" maxlength="4096" inputmode="url" autocapitalize="off" spellcheck="false" autocomplete="off" placeholder="Pega aquí el enlace de YouTube" data-i18n-placeholder="sourcePlaceholder">
+              <button type="submit" class="primary submit-button" id="submit-button" data-i18n="transcribe" disabled>Transcribir</button>
+            </div>
+          </div>
+        </div>
+        <template id="link-template">
+          <div class="link-entry">
+            <label></label>
+            <div class="input-line">
+              <input type="url" maxlength="4096" inputmode="url" autocapitalize="off" spellcheck="false" autocomplete="off">
+              <button class="icon-button remove-button" type="button">×</button>
+            </div>
+          </div>
+        </template>
+        <div class="input-actions">
+          <button type="button" class="text-button" id="add-link" data-i18n="addLink">Añadir otro enlace</button>
+          <button type="button" class="text-button" id="upload-button" data-i18n="uploadButton">o sube un archivo</button>
+        </div>
+        <input type="file" id="file-input" accept="audio/*,video/*,.m4a,.flac,.ogg,.opus,.webm,.mkv,.m4v" multiple hidden>
+        <div class="drop-area" id="drop-area">
+          <span class="drop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4m-4 4 4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg></span>
+          <div class="drop-details">
+            <strong data-i18n="uploadPrompt">Arrastra archivos de audio o video aquí</strong>
+            <span id="upload-help">Hasta 5 elementos por trabajo, con un máximo de 500 MB y 120 minutos por archivo.</span>
+          </div>
+          <button type="button" class="secondary" id="choose-files" data-i18n="chooseFiles" aria-describedby="upload-help">Elegir archivos</button>
+        </div>
+        <ul class="file-list" id="file-list" data-i18n-label="selectedFiles" aria-label="Archivos seleccionados" hidden></ul>
+        <details class="output-settings">
+          <summary data-i18n="outputSettings">Formato e idioma</summary>
+          <div class="form-options">
+            <div class="option">
+              <label for="format" data-i18n="format">Formato</label>
+              <select id="format"><option value="txt">TXT</option><option value="md">MD</option><option value="docx">DOCX</option><option value="srt">SRT</option><option value="vtt">VTT</option></select>
+            </div>
+            <label class="check-option"><input type="checkbox" id="timestamps" checked> <span data-i18n="timestamps">Marcas de tiempo</span></label>
+            <div class="option">
+              <label for="language" data-i18n="language">Idioma del audio</label>
+              <select id="language"><option value="auto" data-i18n="auto">Detectar idioma original</option></select>
+            </div>
+          </div>
+          <div class="combine-option" id="combine-option" hidden>
+            <div class="option">
+              <label for="output" data-i18n="output">Descargar como</label>
+              <select id="output">
+                <option value="separate" data-i18n="separate">Un archivo por elemento (ZIP)</option>
+                <option value="combined" data-i18n="combined">Un solo archivo combinado</option>
+              </select>
+            </div>
+            <p class="hint" id="combine-hint" data-i18n="combineHint" hidden>SRT y VTT guardan cada elemento en un archivo separado dentro del ZIP.</p>
+          </div>
+        </details>
+      </form>
+      <form id="local-form" class="job-form" hidden>
+        <div class="option">
+          <label for="local-file" data-i18n="localFileLabel">Archivo de audio</label>
+          <input id="local-file" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.opus,.flac,.aac,.webm" required aria-describedby="local-help">
+        </div>
+        <p class="hint" id="local-help" data-i18n="localHelp">La primera vez se descarga el modelo de voz.</p>
+        <details class="output-settings">
+          <summary data-i18n="outputSettings">Formato e idioma</summary>
+          <div class="form-options">
+            <div class="option">
+              <label for="local-format" data-i18n="format">Formato</label>
+              <select id="local-format">
+                <option value="txt">TXT</option>
+                <option value="md">Markdown (MD)</option>
+                <option value="docx">Word (DOCX)</option>
+                <option value="srt">SRT</option>
+                <option value="vtt">VTT</option>
+              </select>
+            </div>
+            <div class="option">
+              <label for="local-language" data-i18n="language">Idioma del audio</label>
+              <select id="local-language">
+                <option value="auto" data-i18n="auto">Detectar idioma original</option>
+                <option value="en" lang="en">English</option>
+                <option value="es" lang="es">Español</option>
+                <option value="pt" lang="pt">Português</option>
+              </select>
+            </div>
+            <label class="check-option"><input type="checkbox" id="local-timestamps"> <span data-i18n="timestamps">Marcas de tiempo</span></label>
+          </div>
+        </details>
+        <div class="local-actions">
+          <button class="primary" id="local-submit" type="submit" data-i18n="transcribe" disabled>Transcribir</button>
+        </div>
+      </form>
+      <p class="notice" id="notice" role="alert" hidden></p>
+
+      <section class="job-panel" id="job-panel" aria-labelledby="status-heading" hidden>
+        <div class="job-summary">
+          <h3 id="status-heading" data-i18n="statusTitle">Progreso de la transcripción</h3>
+          <span id="progress-percent" aria-hidden="true">0%</span>
+        </div>
+        <progress id="progress" max="1" value="0" aria-labelledby="status-heading"></progress>
+        <div class="status-actions">
+          <p id="job-stage" aria-live="polite"></p>
+          <button class="secondary" id="cancel" type="button" data-i18n="cancel">Cancelar</button>
+        </div>
+        <p class="hint" id="local-timing" hidden></p>
+        <p class="hint" id="partial" aria-live="polite" hidden></p>
+        <ul class="job-items" id="job-items" hidden></ul>
+      </section>
+
+      <section class="result-panel" id="result-panel" aria-labelledby="result-heading" hidden>
+        <h3 id="result-heading" data-i18n="resultTitle">Tu transcripción está lista</h3>
+        <div class="result-actions">
+          <button class="primary" type="button" id="download">Descargar</button>
+          <button class="secondary" type="button" id="copy" data-i18n="copy" hidden>Copiar</button>
+          <span id="result-feedback" class="hint" role="status"></span>
+        </div>
+        <div id="preview" hidden>
+          <label class="preview-label" for="preview-text" data-i18n="previewLabel">Vista previa de la transcripción</label>
+          <textarea id="preview-text" rows="8" readonly></textarea>
+        </div>
+      </section>
+    </section>
+
+<article class="prose guide"><h2>Cómo convertir un video de YouTube a texto en 3 pasos</h2>
+<ol>
+  <li><strong>Copia el enlace del video.</strong> Abre el video que tienes permiso para transcribir y copia su dirección desde la barra del navegador o el botón «Compartir». Pégala en el campo de enlace de esta página con el modo «Servidor» seleccionado.</li>
+  <li><strong>Elige qué quieres descargar.</strong> Para leer la transcripción de YouTube en un documento editable, selecciona Word. Si necesitas saber cuándo se dijo cada frase, activa las marcas de tiempo. Deja la detección automática del idioma o indica el idioma que se escucha.</li>
+  <li><strong>Inicia la transcripción.</strong> Pulsa «Transcribir». Cuando termine, descarga el resultado y abre el video junto al texto. Comprueba una frase al principio y otra más adelante antes de usar el documento o importar los subtítulos.</li>
+</ol>
+<h2>Del enlace al documento sin registro</h2>
+<p>Puedes usar el transcriptor de YouTube sin abrir una cuenta ni vincular tu canal. Un enlace sirve para identificar el video concreto que quieres procesar. Ten a mano el original si planeas editar citas o volver a un ejemplo del que se habla durante la grabación.</p>
+<h2>Usa «Servidor» para enlaces y «En este dispositivo» para audio</h2>
+<p>El servidor solicita el video a YouTube, extrae su audio y envía fragmentos a Groq para reconocer la voz. Si ya tienes un archivo de audio autorizado y prefieres procesarlo en el navegador, elige «En este dispositivo» y selecciona ese archivo. El modo local trabaja con la grabación que eliges en tu equipo.</p>
+<h2>De YouTube a texto sin subtítulos previos</h2>
+<p>La herramienta escucha la pista de audio aunque el video tenga desactivados los subtítulos. También puedes transcribir un video que ya los tenga. El resultado refleja la voz reconocida y puede diferir de los subtítulos que escribió el creador. Un título sobreimpreso, una gráfica o una instrucción que nadie pronuncia requiere revisar la imagen.</p>
+<h2>Descarga texto o subtítulos con sus tiempos</h2>
+<p>Usa TXT o Markdown para trabajar con el guion y DOCX para corregirlo en Word. Los tres admiten marcas de tiempo opcionales. SRT y VTT incluyen intervalos por segmento. Al llevarlos a un editor, reproduce también los cambios de escena y verifica que cada línea aparezca cuando se escucha la frase correspondiente.</p>
+<h2>Clases en video, entrevistas y canales</h2>
+<p>Un estudiante puede localizar la explicación de un ejercicio dentro de una clase grabada. Un periodista puede volver al momento exacto de una entrevista antes de citarla. Si administras un canal, puedes revisar el vocabulario de un tutorial o preparar subtítulos para una grabación propia de una reunión.</p>
+<h2>Preguntas frecuentes</h2>
+<h3>¿Qué enlaces puedo pegar en el campo de YouTube?</h3>
+<p>Usa la dirección pública de un video concreto o su enlace corto de youtu.be. Comprueba que corresponda a una grabación disponible y que tengas permiso para procesarla. Un enlace público por sí solo no concede esos derechos.</p>
+<h3>¿Por qué YouTube bloqueó mi descarga?</h3>
+<p>YouTube puede rechazar solicitudes procedentes de la dirección IP del servidor. Si tienes una copia autorizada, sube el archivo desde el formulario. También puedes intentarlo más tarde.</p>
+<h3>¿Cabe una conferencia entera en un trabajo?</h3>
+<p>Hasta 5 elementos por trabajo, con un máximo de 500 MB y 120 minutos por archivo. En el modo Servidor, cada usuario puede transcribir hasta 120 minutos de audio en un período móvil de 24 horas. Cada video cuenta como un archivo. Revisa la duración y tu saldo antes de empezar.</p>
+<h3>¿La herramienta traduce el diálogo al español?</h3>
+<p>La transcripción conserva el idioma hablado. Si conoces el idioma, puedes seleccionarlo en las opciones para orientar el reconocimiento. Revisa los nombres propios, especialmente cuando se oyen música, ruido o varias voces a la vez.</p>
+<h3>¿Dónde encuentro el texto después de cerrar el video?</h3>
+<p>Guarda la descarga desde la página de la herramienta al terminar. El enlace de descarga del servidor suele caducar después de una hora. Conserva junto al documento la dirección del video para volver a comprobar tus citas.</p>
+
+<h2>Otras herramientas</h2><ul><li><a href="/">Audio a texto</a></li><li><a href="/video-a-texto/">Video a texto</a></li></ul></article>
+  </main>
+  <footer class="site-footer"><nav class="container" aria-label="Pie de página"><a href="/">Audio a texto</a>
+<a href="/youtube-a-texto/" aria-current="page">YouTube a texto</a>
+<a href="/video-a-texto/">Video a texto</a>
+<a href="/acerca-de/">Acerca de</a>
+<a href="/contacto/">Contacto</a>
+<a href="/privacidad/">Privacidad</a>
+<a href="/terminos/">Términos</a></nav></footer>
+</body>
+</html>

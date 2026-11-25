@@ -1,0 +1,2 @@
+# No advertising sellers are authorized in this version.
+# Add the exact authorized seller record supplied by the ad network after approval.

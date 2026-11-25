@@ -1,0 +1,12 @@
+<h1>About transcriptoryt</h1>
+    <p>Turn a recording into text you can read, edit or use as subtitles. transcriptoryt is a free tool operated by <a href="https://www.linkedin.com/in/thiago-raul-solaeche-duarte-8a3400265/" rel="author">Thiago Raul Solaeche Duarte</a>, with no account or subscription required.</p>
+    <h2>Two ways to transcribe</h2>
+    <p><strong>On this device</strong> uses multilingual Whisper in your browser. Phones and tablets use quantized Whisper Tiny. Desktop browsers normally use Whisper Base. Choose one audio file your browser can decode. The model is downloaded when needed, using single-threaded WebAssembly on mobile and WebGPU or WebAssembly on desktop. Audio stays on your device and does not consume server minutes. Processing speed depends on your device; automatic language detection and English, Spanish and Portuguese overrides are available.</p>
+    <p><strong>Server</strong> accepts uploaded audio/video and supported direct media or YouTube links. Our server reads and converts the audio with ffmpeg and sends chunks to the hosted Groq Whisper transcription API. It does not reuse captions from the source. Quotas and a shared operating budget keep the service manageable. Link availability depends on the source, and YouTube may block a server's IP address.</p>
+    <h2>Download what you need</h2>
+    <p>Both modes export TXT, Markdown, Word (DOCX), SRT and VTT. TXT, Markdown and Word offer optional timestamps; subtitle formats always include timing. Server mode supports multiple items and combined documents or ZIP downloads. Device mode handles one audio file at a time.</p>
+    <h2>Privacy and practical limits</h2>
+    <p>Device processing keeps the selected audio out of our server. Server processing sends audio to a third-party provider, removes temporary audio when the job ends, and offers downloads for a limited period. The <a href="/en/privacy/">privacy policy</a> explains cookies, quotas, model downloads and retention.</p>
+    <p>Speech recognition can make mistakes, especially with noise, overlapping speakers, names and specialized language. Review your transcript and timings before sharing them. Only process recordings you have permission to use.</p>
+    <p><a class="primary" href="/en/">Start a transcription</a></p>
+    <p>For feedback or a problem with the tool, <a href="/en/contact/">contact the operator</a>.</p>

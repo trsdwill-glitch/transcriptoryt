@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+# Jobs, estado y descargas temporales están dentro de /api/jobs/.
+Disallow: /api/
+Disallow: /api$
+
+Sitemap: https://transcriptoryt.com/sitemap.xml

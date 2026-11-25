@@ -1,0 +1,7 @@
+# Copy to deploy/youtube-urls.txt, then add at least 30 different public URLs.
+# One complete single-video URL per line; blank lines and comments are ignored.
+# Choose videos you have the right to download, under MAX_FILE_MIN (120 minutes).
+# Use a representative mix of languages/durations/content, not the same video 30 times.
+# Do not include private, age-restricted, live videos, playlists or personal cookies.
+# This template intentionally has no fabricated or unverified video URLs.
+# Run the real corpus from the VPS IP using the command in DESPLIEGUE.md.

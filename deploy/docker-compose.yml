@@ -1,0 +1,68 @@
+name: transcriptor
+services:
+  app:
+    image: transcriptor:local
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      target: production
+    env_file: .env
+    environment:
+      ENV: production
+      DATA_DIR: /data
+      TRUSTED_PROXY: "true"
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=134217728,uid=10001,gid=10001,mode=1770
+    volumes:
+      - app_data:/data
+    expose:
+      - "8000"
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 2g
+    cpus: 1.5
+    pids_limit: 192
+    stop_grace_period: 45s
+    logging:
+      driver: local
+      options:
+        max-size: 10m
+        max-file: "3"
+  caddy:
+    image: caddy:2.11.9-alpine
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      DOMAIN: ${DOMAIN:?Set DOMAIN in deploy/.env}
+      CONTACT_EMAIL: ${CONTACT_EMAIL:?Set CONTACT_EMAIL in deploy/.env}
+      MAX_REQUEST_BODY: ${MAX_REQUEST_BODY:-2622488576}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    read_only: true
+    tmpfs: [/tmp:rw,noexec,nosuid,size=16777216]
+    cap_drop: [ALL]
+    cap_add: [NET_BIND_SERVICE]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 128
+    logging:
+      driver: local
+      options:
+        max-size: 10m
+        max-file: "3"
+volumes:
+  app_data:
+  caddy_data:
+  caddy_config:

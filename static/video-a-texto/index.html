@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es" data-tool="video">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Video a texto gratis: transcribe tus videos | transcriptoryt</title>
+  <meta name="description" content="Convierte video a texto gratis: sube tu archivo o pega un enlace y descarga la transcripción en TXT, Word, SRT o VTT. Sin crear cuenta.">
+  <link rel="canonical" href="https://transcriptoryt.com/video-a-texto/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="transcriptoryt">
+  <meta property="og:title" content="Video a texto gratis: transcribe tus videos | transcriptoryt">
+  <meta property="og:description" content="Convierte video a texto gratis: sube tu archivo o pega un enlace y descarga la transcripción en TXT, Word, SRT o VTT. Sin crear cuenta.">
+  <meta property="og:url" content="https://transcriptoryt.com/video-a-texto/">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="transcriptoryt · Audio y video a texto">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Video a texto gratis: transcribe tus videos | transcriptoryt">
+  <meta name="twitter:description" content="Convierte video a texto gratis: sube tu archivo o pega un enlace y descarga la transcripción en TXT, Word, SRT o VTT. Sin crear cuenta.">
+  <meta name="twitter:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta name="twitter:image:alt" content="transcriptoryt · Audio y video a texto">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"transcriptoryt: Video a texto","url":"https://transcriptoryt.com/video-a-texto/","inLanguage":"es","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":0,"priceCurrency":"USD"},"featureList":["Reconocimiento de voz en el navegador","Enlaces y archivos en el servidor","Descargas TXT, Markdown, DOCX, SRT y VTT","Marcas de tiempo"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://transcriptoryt.com/"},{"@type":"ListItem","position":2,"name":"Video a texto","item":"https://transcriptoryt.com/video-a-texto/"}]}]}</script>
+  <link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/style.css?v=57e1364988">
+  <link rel="stylesheet" href="/assets/transcriber.css?v=571b507055">
+  <script src="/assets/tool-copy.js?v=8185a587dd" defer></script>
+  <script src="/assets/app.js?v=1ff754557d" defer></script>
+</head>
+<body class="transcriber">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header"><div class="container">
+    <a class="brand" href="/"><img src="/assets/brand-mark.svg" width="32" height="32" alt="">transcriptoryt</a>
+    <nav class="main-nav" aria-label="Navegación principal"><a href="/">Audio a texto</a>
+<a href="/youtube-a-texto/">YouTube a texto</a>
+<a href="/video-a-texto/" aria-current="page">Video a texto</a>
+<a href="/acerca-de/">Acerca de</a></nav>
+    <div class="header-actions">
+      <div class="locale-switch" role="group" aria-label="Idioma"><a href="/en/" hreflang="en" aria-label="Inicio en inglés">EN · Inicio</a></div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema" data-switch-dark="Usar tema oscuro" data-switch-light="Usar tema claro" type="button">
+        <svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
+      </button>
+    </div>
+  </div></header>
+  <main id="main" tabindex="-1" class="container dashboard">
+    <nav class="breadcrumb" aria-label="Ruta de navegación"><ol><li><a href="/">Inicio</a></li><li aria-current="page">Video a texto</li></ol></nav>
+    <div class="hero"><h1>Video a texto: transcribir videos gratis</h1><p>Convierte video a texto gratis a partir de un archivo o un enlace directo al medio. Descarga las palabras de la grabación como documento editable o como subtítulos para tu video.</p></div>
+<section class="tool-card" aria-labelledby="tool-heading">
+      <div class="tool-top">
+        <h2 class="sr-only" id="tool-heading" data-i18n="toolTitle">Transcribir un video</h2>
+        <div class="mode-switch" role="group" data-i18n-label="modeLabel" aria-label="Modo de transcripción" hidden>
+          <button class="secondary" type="button" data-mode="server" aria-pressed="true" data-i18n="modeServer">Servidor</button>
+          <button class="secondary" type="button" data-mode="local" aria-pressed="false" data-i18n="modeLocal">En este dispositivo</button>
+        </div>
+        <p class="quota" id="quota" aria-live="polite" data-i18n="quotaLoading">Consultando los minutos disponibles…</p>
+      </div>
+
+      <form id="job-form" class="job-form" novalidate>
+        <input type="file" id="file-input" accept="audio/*,video/*,.m4a,.flac,.ogg,.opus,.webm,.mkv,.m4v" multiple hidden>
+        <div class="drop-area" id="drop-area">
+          <span class="drop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4m-4 4 4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg></span>
+          <div class="drop-details">
+            <strong data-i18n="uploadPrompt">Arrastra archivos de audio o video aquí</strong>
+            <span id="upload-help">Hasta 5 elementos por trabajo, con un máximo de 500 MB y 120 minutos por archivo.</span>
+          </div>
+          <button type="button" class="secondary" id="choose-files" data-i18n="chooseFiles" aria-describedby="upload-help">Elegir archivos</button>
+        </div>
+        <ul class="file-list" id="file-list" data-i18n-label="selectedFiles" aria-label="Archivos seleccionados" hidden></ul>
+        <div class="input-grid" id="link-entries">
+          <div class="link-entry">
+            <label for="source-1" data-i18n="sourceLabel">Enlace del video</label>
+            <div class="input-line">
+              <input id="source-1" type="url" maxlength="4096" inputmode="url" autocapitalize="off" spellcheck="false" autocomplete="off" placeholder="Pega un enlace de YouTube o multimedia" data-i18n-placeholder="sourcePlaceholder">
+              <button type="submit" class="primary submit-button" id="submit-button" data-i18n="transcribe" disabled>Transcribir</button>
+            </div>
+          </div>
+        </div>
+        <template id="link-template">
+          <div class="link-entry">
+            <label></label>
+            <div class="input-line">
+              <input type="url" maxlength="4096" inputmode="url" autocapitalize="off" spellcheck="false" autocomplete="off">
+              <button class="icon-button remove-button" type="button">×</button>
+            </div>
+          </div>
+        </template>
+        <div class="input-actions">
+          <button type="button" class="text-button" id="add-link" data-i18n="addLink">Añadir otro enlace</button>
+          <button type="button" class="text-button" id="upload-button" data-i18n="uploadButton">o sube un archivo</button>
+        </div>
+        <details class="output-settings">
+          <summary data-i18n="outputSettings">Formato e idioma</summary>
+          <div class="form-options">
+            <div class="option">
+              <label for="format" data-i18n="format">Formato</label>
+              <select id="format"><option value="txt">TXT</option><option value="md">MD</option><option value="docx">DOCX</option><option value="srt">SRT</option><option value="vtt">VTT</option></select>
+            </div>
+            <label class="check-option"><input type="checkbox" id="timestamps" checked> <span data-i18n="timestamps">Marcas de tiempo</span></label>
+            <div class="option">
+              <label for="language" data-i18n="language">Idioma del audio</label>
+              <select id="language"><option value="auto" data-i18n="auto">Detectar idioma original</option></select>
+            </div>
+          </div>
+          <div class="combine-option" id="combine-option" hidden>
+            <div class="option">
+              <label for="output" data-i18n="output">Descargar como</label>
+              <select id="output">
+                <option value="separate" data-i18n="separate">Un archivo por elemento (ZIP)</option>
+                <option value="combined" data-i18n="combined">Un solo archivo combinado</option>
+              </select>
+            </div>
+            <p class="hint" id="combine-hint" data-i18n="combineHint" hidden>SRT y VTT guardan cada elemento en un archivo separado dentro del ZIP.</p>
+          </div>
+        </details>
+      </form>
+      <form id="local-form" class="job-form" hidden>
+        <div class="option">
+          <label for="local-file" data-i18n="localFileLabel">Archivo de audio</label>
+          <input id="local-file" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.opus,.flac,.aac,.webm" required aria-describedby="local-help">
+        </div>
+        <p class="hint" id="local-help" data-i18n="localHelp">La primera vez se descarga el modelo de voz.</p>
+        <details class="output-settings">
+          <summary data-i18n="outputSettings">Formato e idioma</summary>
+          <div class="form-options">
+            <div class="option">
+              <label for="local-format" data-i18n="format">Formato</label>
+              <select id="local-format">
+                <option value="txt">TXT</option>
+                <option value="md">Markdown (MD)</option>
+                <option value="docx">Word (DOCX)</option>
+                <option value="srt">SRT</option>
+                <option value="vtt">VTT</option>
+              </select>
+            </div>
+            <div class="option">
+              <label for="local-language" data-i18n="language">Idioma del audio</label>
+              <select id="local-language">
+                <option value="auto" data-i18n="auto">Detectar idioma original</option>
+                <option value="en" lang="en">English</option>
+                <option value="es" lang="es">Español</option>
+                <option value="pt" lang="pt">Português</option>
+              </select>
+            </div>
+            <label class="check-option"><input type="checkbox" id="local-timestamps"> <span data-i18n="timestamps">Marcas de tiempo</span></label>
+          </div>
+        </details>
+        <div class="local-actions">
+          <button class="primary" id="local-submit" type="submit" data-i18n="transcribe" disabled>Transcribir</button>
+        </div>
+      </form>
+      <p class="notice" id="notice" role="alert" hidden></p>
+
+      <section class="job-panel" id="job-panel" aria-labelledby="status-heading" hidden>
+        <div class="job-summary">
+          <h3 id="status-heading" data-i18n="statusTitle">Progreso de la transcripción</h3>
+          <span id="progress-percent" aria-hidden="true">0%</span>
+        </div>
+        <progress id="progress" max="1" value="0" aria-labelledby="status-heading"></progress>
+        <div class="status-actions">
+          <p id="job-stage" aria-live="polite"></p>
+          <button class="secondary" id="cancel" type="button" data-i18n="cancel">Cancelar</button>
+        </div>
+        <p class="hint" id="local-timing" hidden></p>
+        <p class="hint" id="partial" aria-live="polite" hidden></p>
+        <ul class="job-items" id="job-items" hidden></ul>
+      </section>
+
+      <section class="result-panel" id="result-panel" aria-labelledby="result-heading" hidden>
+        <h3 id="result-heading" data-i18n="resultTitle">Tu transcripción está lista</h3>
+        <div class="result-actions">
+          <button class="primary" type="button" id="download">Descargar</button>
+          <button class="secondary" type="button" id="copy" data-i18n="copy" hidden>Copiar</button>
+          <span id="result-feedback" class="hint" role="status"></span>
+        </div>
+        <div id="preview" hidden>
+          <label class="preview-label" for="preview-text" data-i18n="previewLabel">Vista previa de la transcripción</label>
+          <textarea id="preview-text" rows="8" readonly></textarea>
+        </div>
+      </section>
+    </section>
+
+<article class="prose guide"><h2>Cómo convertir video a texto en 3 pasos</h2>
+<ol>
+  <li><strong>Selecciona el video.</strong> En «Servidor», elige el archivo de tu equipo o arrástralo al área de carga. Si tienes una dirección directa del medio, pégala en el campo de enlace. Comprueba que el video tenga una pista de voz audible.</li>
+  <li><strong>Configura el documento.</strong> Abre las opciones de formato e idioma. Word resulta práctico para editar una entrevista. SRT o VTT sirven para volver a colocar las palabras junto a la imagen. Si conoces el idioma de la grabación, puedes seleccionarlo antes de empezar.</li>
+  <li><strong>Descarga y contrasta.</strong> Pulsa «Transcribir», espera el resultado y guarda el archivo. Reproduce el video mientras revisas el texto. Cuando un ponente señale algo en pantalla, añade el contexto visual que necesites para entender la frase más tarde.</li>
+</ol>
+<h2>Transcribe tus videos sin registro</h2>
+<p>Puedes cargar una grabación y descargar el documento en la misma sesión, sin crear un perfil. Para conservar distintas versiones de un proyecto, guarda el texto junto al video del que procede. Una edición posterior del metraje puede cambiar la posición de los subtítulos aunque las palabras sigan siendo las mismas.</p>
+<h2>Cuándo usar «Servidor» y cuándo elegir «En este dispositivo»</h2>
+<p>Elige «Servidor» para subir el archivo de video completo o pegar un enlace compatible. El servidor usa ffmpeg para preparar el sonido y envía el audio al proveedor de reconocimiento. Si ya tienes la pista de audio por separado, puedes abrirla con «En este dispositivo». Ese modo procesa un archivo compatible en el navegador y conserva allí la grabación.</p>
+<h2>Videos sin subtítulos y grabaciones de pantalla</h2>
+<p>Para transcribir video a texto gratis en el servidor basta con que el archivo contenga voz reconocible. Puedes trabajar con la grabación de una videollamada aunque nunca se hayan creado subtítulos. Si grabaste solo la pantalla y el micrófono estaba apagado, el contenido visual por sí solo no proporciona las palabras de la conversación.</p>
+<h2>Formatos para edición y marcas de tiempo</h2>
+<p>Elige TXT para un texto sencillo, Markdown para incorporarlo a tus apuntes o DOCX para comentarlo con otra persona. Activa los tiempos si necesitas localizar un corte durante la edición. Para subtítulos, descarga SRT o VTT. Cada segmento lleva sus tiempos y puedes revisarlo en el reproductor antes de publicar.</p>
+<h2>Videoclases, reuniones y material de edición</h2>
+<p>Si estudias, puedes acompañar el texto de una videoclase con una captura de la diapositiva correspondiente. En periodismo, un borrador permite localizar las respuestas de una entrevista y contrastarlas con la fuente. Un creador puede buscar una toma por las palabras del presentador. Para una reunión, verifica las decisiones con la grabación antes de distribuir un acta.</p>
+<h2>Preguntas frecuentes</h2>
+<h3>¿Puedo subir un MP4 desde mi computadora?</h3>
+<p>Sí. El modo Servidor admite videos como MP4 con una pista de audio que ffmpeg pueda leer. Si el archivo se reproduce sin sonido, comprueba el original antes de volver a subirlo.</p>
+<h3>¿Qué tamaño y duración admite mi video?</h3>
+<p>Hasta 5 elementos por trabajo, con un máximo de 500 MB y 120 minutos por archivo. En el modo Servidor, cada usuario puede transcribir hasta 120 minutos de audio en un período móvil de 24 horas. El lote completo comparte ese saldo.</p>
+<h3>¿Cómo descargo varios videos en documentos separados?</h3>
+<p>Añade los archivos al mismo trabajo y selecciona la salida separada. El servidor reúne los resultados del lote en un ZIP. Para obtener un único documento, elige TXT, Markdown o DOCX y la opción combinada.</p>
+<h3>¿Qué reviso si dos participantes hablan al mismo tiempo?</h3>
+<p>Escucha de nuevo ese tramo y comprueba quién dijo cada frase. El reconocimiento puede omitir palabras con ruido de fondo o escribir mal nombres propios. Si atribuyes una cita a una persona, confirma la atribución con el video.</p>
+<h3>¿Puedo procesar un video compartido conmigo?</h3>
+<p>Hazlo solo si tienes permiso para procesar el material y compartir el audio con el proveedor elegido. Revisa el consentimiento de los participantes si la grabación contiene una conversación privada.</p>
+
+<h2>Otras herramientas</h2><ul><li><a href="/">Audio a texto</a></li><li><a href="/youtube-a-texto/">YouTube a texto</a></li></ul></article>
+  </main>
+  <footer class="site-footer"><nav class="container" aria-label="Pie de página"><a href="/">Audio a texto</a>
+<a href="/youtube-a-texto/">YouTube a texto</a>
+<a href="/video-a-texto/" aria-current="page">Video a texto</a>
+<a href="/acerca-de/">Acerca de</a>
+<a href="/contacto/">Contacto</a>
+<a href="/privacidad/">Privacidad</a>
+<a href="/terminos/">Términos</a></nav></footer>
+</body>
+</html>

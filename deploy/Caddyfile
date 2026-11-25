@@ -1,0 +1,46 @@
+{
+	email {$CONTACT_EMAIL}
+	admin off
+}
+
+{$DOMAIN} {
+	encode zstd gzip
+	request_body {
+		# Five 500 MiB files + 1 MiB multipart overhead. The app enforces each file.
+		max_size {$MAX_REQUEST_BODY:2622488576}
+	}
+	header {
+		Strict-Transport-Security "max-age=15552000"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		X-Frame-Options DENY
+		-Server
+	}
+	# No access log: do not persist visitor IPs, request URLs or cookies.
+	reverse_proxy app:8000 {
+		# Direct DNS only. Replace any client-supplied forwarding headers.
+		header_up X-Forwarded-For {remote_host}
+		header_up X-Real-IP {remote_host}
+		header_up -X-Site-Alias
+		header_up -CF-Connecting-IP
+	}
+}
+
+# Let the same page router collapse legacy path, locale, host and scheme into one 301.
+http://{$DOMAIN}, http://www.{$DOMAIN}, https://www.{$DOMAIN} {
+	@pages {
+		method GET HEAD
+		not path /api /api/* /assets/*
+	}
+	handle @pages {
+		reverse_proxy app:8000 {
+			header_up X-Site-Alias {$DOMAIN}
+			header_up X-Forwarded-For {remote_host}
+			header_up X-Real-IP {remote_host}
+			header_up -CF-Connecting-IP
+		}
+	}
+	handle {
+		redir https://{$DOMAIN}{uri} 301
+	}
+}

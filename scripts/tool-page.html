@@ -1,0 +1,136 @@
+<section class="tool-card" aria-labelledby="tool-heading">
+      <div class="tool-top">
+        <h2 class="sr-only" id="tool-heading" data-i18n="toolTitle">{{toolTitle}}</h2>
+        <div class="mode-switch" role="group" data-i18n-label="modeLabel" aria-label="{{modeLabel}}" hidden>
+          <button class="secondary" type="button" data-mode="server" aria-pressed="true" data-i18n="modeServer">{{modeServer}}</button>
+          <button class="secondary" type="button" data-mode="local" aria-pressed="false" data-i18n="modeLocal">{{modeLocal}}</button>
+        </div>
+        <p class="quota" id="quota" aria-live="polite" data-i18n="quotaLoading">{{quotaLoading}}</p>
+      </div>
+
+      <form id="job-form" class="job-form" novalidate>
+        <!-- links -->
+        <div class="input-grid" id="link-entries">
+          <div class="link-entry">
+            <label for="source-1" data-i18n="sourceLabel">{{sourceLabel}}</label>
+            <div class="input-line">
+              <input id="source-1" type="url" maxlength="4096" inputmode="url" autocapitalize="off" spellcheck="false" autocomplete="off" placeholder="{{sourcePlaceholder}}" data-i18n-placeholder="sourcePlaceholder">
+              <button type="submit" class="primary submit-button" id="submit-button" data-i18n="transcribe" disabled>{{transcribe}}</button>
+            </div>
+          </div>
+        </div>
+        <template id="link-template">
+          <div class="link-entry">
+            <label></label>
+            <div class="input-line">
+              <input type="url" maxlength="4096" inputmode="url" autocapitalize="off" spellcheck="false" autocomplete="off">
+              <button class="icon-button remove-button" type="button">×</button>
+            </div>
+          </div>
+        </template>
+        <div class="input-actions">
+          <button type="button" class="text-button" id="add-link" data-i18n="addLink">{{addLink}}</button>
+          <button type="button" class="text-button" id="upload-button" data-i18n="uploadButton">{{uploadButton}}</button>
+        </div>
+        <!-- upload -->
+        <input type="file" id="file-input" accept="audio/*,video/*,.m4a,.flac,.ogg,.opus,.webm,.mkv,.m4v" multiple hidden>
+        <div class="drop-area" id="drop-area">
+          <span class="drop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4m-4 4 4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg></span>
+          <div class="drop-details">
+            <strong data-i18n="uploadPrompt">{{uploadPrompt}}</strong>
+            <span id="upload-help">{{initialUploadHelp}}</span>
+          </div>
+          <button type="button" class="secondary" id="choose-files" data-i18n="chooseFiles" aria-describedby="upload-help">{{chooseFiles}}</button>
+        </div>
+        <ul class="file-list" id="file-list" data-i18n-label="selectedFiles" aria-label="{{selectedFiles}}" hidden></ul>
+        <!-- end inputs -->
+        <details class="output-settings">
+          <summary data-i18n="outputSettings">{{outputSettings}}</summary>
+          <div class="form-options">
+            <div class="option">
+              <label for="format" data-i18n="format">{{format}}</label>
+              <select id="format"><option value="txt">TXT</option><option value="md">MD</option><option value="docx">DOCX</option><option value="srt">SRT</option><option value="vtt">VTT</option></select>
+            </div>
+            <label class="check-option"><input type="checkbox" id="timestamps" checked> <span data-i18n="timestamps">{{timestamps}}</span></label>
+            <div class="option">
+              <label for="language" data-i18n="language">{{language}}</label>
+              <select id="language"><option value="auto" data-i18n="auto">{{auto}}</option></select>
+            </div>
+          </div>
+          <div class="combine-option" id="combine-option" hidden>
+            <div class="option">
+              <label for="output" data-i18n="output">{{output}}</label>
+              <select id="output">
+                <option value="separate" data-i18n="separate">{{separate}}</option>
+                <option value="combined" data-i18n="combined">{{combined}}</option>
+              </select>
+            </div>
+            <p class="hint" id="combine-hint" data-i18n="combineHint" hidden>{{combineHint}}</p>
+          </div>
+        </details>
+      </form>
+      <form id="local-form" class="job-form" hidden>
+        <div class="option">
+          <label for="local-file" data-i18n="localFileLabel">{{localFileLabel}}</label>
+          <input id="local-file" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.opus,.flac,.aac,.webm" required aria-describedby="local-help">
+        </div>
+        <p class="hint" id="local-help" data-i18n="localHelp">{{localHelp}}</p>
+        <details class="output-settings">
+          <summary data-i18n="outputSettings">{{outputSettings}}</summary>
+          <div class="form-options">
+            <div class="option">
+              <label for="local-format" data-i18n="format">{{format}}</label>
+              <select id="local-format">
+                <option value="txt">TXT</option>
+                <option value="md">Markdown (MD)</option>
+                <option value="docx">Word (DOCX)</option>
+                <option value="srt">SRT</option>
+                <option value="vtt">VTT</option>
+              </select>
+            </div>
+            <div class="option">
+              <label for="local-language" data-i18n="language">{{language}}</label>
+              <select id="local-language">
+                <option value="auto" data-i18n="auto">{{auto}}</option>
+                <option value="en" lang="en">English</option>
+                <option value="es" lang="es">Español</option>
+                <option value="pt" lang="pt">Português</option>
+              </select>
+            </div>
+            <label class="check-option"><input type="checkbox" id="local-timestamps"> <span data-i18n="timestamps">{{timestamps}}</span></label>
+          </div>
+        </details>
+        <div class="local-actions">
+          <button class="primary" id="local-submit" type="submit" data-i18n="transcribe" disabled>{{transcribe}}</button>
+        </div>
+      </form>
+      <p class="notice" id="notice" role="alert" hidden></p>
+
+      <section class="job-panel" id="job-panel" aria-labelledby="status-heading" hidden>
+        <div class="job-summary">
+          <h3 id="status-heading" data-i18n="statusTitle">{{statusTitle}}</h3>
+          <span id="progress-percent" aria-hidden="true">0%</span>
+        </div>
+        <progress id="progress" max="1" value="0" aria-labelledby="status-heading"></progress>
+        <div class="status-actions">
+          <p id="job-stage" aria-live="polite"></p>
+          <button class="secondary" id="cancel" type="button" data-i18n="cancel">{{cancel}}</button>
+        </div>
+        <p class="hint" id="local-timing" hidden></p>
+        <p class="hint" id="partial" aria-live="polite" hidden></p>
+        <ul class="job-items" id="job-items" hidden></ul>
+      </section>
+
+      <section class="result-panel" id="result-panel" aria-labelledby="result-heading" hidden>
+        <h3 id="result-heading" data-i18n="resultTitle">{{resultTitle}}</h3>
+        <div class="result-actions">
+          <button class="primary" type="button" id="download">{{downloadLabel}}</button>
+          <button class="secondary" type="button" id="copy" data-i18n="copy" hidden>{{copy}}</button>
+          <span id="result-feedback" class="hint" role="status"></span>
+        </div>
+        <div id="preview" hidden>
+          <label class="preview-label" for="preview-text" data-i18n="previewLabel">{{previewLabel}}</label>
+          <textarea id="preview-text" rows="8" readonly></textarea>
+        </div>
+      </section>
+    </section>

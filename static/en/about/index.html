@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>About the transcription tool | transcriptoryt</title>
+  <meta name="description" content="Learn how transcriptoryt turns speech into downloadable text with on-device Whisper and a hosted server transcription option.">
+  <link rel="canonical" href="https://transcriptoryt.com/en/about/">
+  <link rel="alternate" hreflang="es" href="https://transcriptoryt.com/acerca-de/">
+  <link rel="alternate" hreflang="en" href="https://transcriptoryt.com/en/about/">
+  <link rel="alternate" hreflang="x-default" href="https://transcriptoryt.com/acerca-de/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="transcriptoryt">
+  <meta property="og:title" content="About the transcription tool | transcriptoryt">
+  <meta property="og:description" content="Learn how transcriptoryt turns speech into downloadable text with on-device Whisper and a hosted server transcription option.">
+  <meta property="og:url" content="https://transcriptoryt.com/en/about/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="transcriptoryt · Audio and video to text">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About the transcription tool | transcriptoryt">
+  <meta name="twitter:description" content="Learn how transcriptoryt turns speech into downloadable text with on-device Whisper and a hosted server transcription option.">
+  <meta name="twitter:image" content="https://transcriptoryt.com/assets/social-card.png">
+  <meta name="twitter:image:alt" content="transcriptoryt · Audio and video to text">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://transcriptoryt.com/en/"},{"@type":"ListItem","position":2,"name":"About","item":"https://transcriptoryt.com/en/about/"}]}]}</script>
+  <link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/style.css?v=57e1364988">
+  <link rel="stylesheet" href="/assets/transcriber.css?v=571b507055">
+  
+</head>
+<body class="transcriber">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container">
+    <a class="brand" href="/en/"><img src="/assets/brand-mark.svg" width="32" height="32" alt="">transcriptoryt</a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/en/">Audio to text</a>
+<a href="/youtube-a-texto/" hreflang="es">YouTube to text (Spanish)</a>
+<a href="/video-a-texto/" hreflang="es">Video to text (Spanish)</a>
+<a href="/en/about/" aria-current="page">About</a></nav>
+    <div class="header-actions">
+      <div class="locale-switch" role="group" aria-label="Language"><a lang="es" hreflang="es" href="/acerca-de/" aria-label="Español">ES</a><a lang="en" hreflang="en" href="/en/about/" aria-label="English" aria-current="page">EN</a></div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-switch-dark="Use dark theme" data-switch-light="Use light theme" type="button">
+        <svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
+      </button>
+    </div>
+  </div></header>
+  <main id="main" tabindex="-1" class="container prose">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li aria-current="page">About</li></ol></nav>
+    <h1>About transcriptoryt</h1>
+    <p>Turn a recording into text you can read, edit or use as subtitles. transcriptoryt is a free tool operated by <a href="https://www.linkedin.com/in/thiago-raul-solaeche-duarte-8a3400265/" rel="author">Thiago Raul Solaeche Duarte</a>, with no account or subscription required.</p>
+    <h2>Two ways to transcribe</h2>
+    <p><strong>On this device</strong> uses multilingual Whisper in your browser. Phones and tablets use quantized Whisper Tiny. Desktop browsers normally use Whisper Base. Choose one audio file your browser can decode. The model is downloaded when needed, using single-threaded WebAssembly on mobile and WebGPU or WebAssembly on desktop. Audio stays on your device and does not consume server minutes. Processing speed depends on your device; automatic language detection and English, Spanish and Portuguese overrides are available.</p>
+    <p><strong>Server</strong> accepts uploaded audio/video and supported direct media or YouTube links. Our server reads and converts the audio with ffmpeg and sends chunks to the hosted Groq Whisper transcription API. It does not reuse captions from the source. Quotas and a shared operating budget keep the service manageable. Link availability depends on the source, and YouTube may block a server's IP address.</p>
+    <h2>Download what you need</h2>
+    <p>Both modes export TXT, Markdown, Word (DOCX), SRT and VTT. TXT, Markdown and Word offer optional timestamps; subtitle formats always include timing. Server mode supports multiple items and combined documents or ZIP downloads. Device mode handles one audio file at a time.</p>
+    <h2>Privacy and practical limits</h2>
+    <p>Device processing keeps the selected audio out of our server. Server processing sends audio to a third-party provider, removes temporary audio when the job ends, and offers downloads for a limited period. The <a href="/en/privacy/">privacy policy</a> explains cookies, quotas, model downloads and retention.</p>
+    <p>Speech recognition can make mistakes, especially with noise, overlapping speakers, names and specialized language. Review your transcript and timings before sharing them. Only process recordings you have permission to use.</p>
+    <p><a class="primary" href="/en/">Start a transcription</a></p>
+    <p>For feedback or a problem with the tool, <a href="/en/contact/">contact the operator</a>.</p>
+
+  </main>
+  <footer class="site-footer"><nav class="container" aria-label="Footer"><a href="/en/">Audio to text</a>
+<a href="/youtube-a-texto/" hreflang="es">YouTube to text (Spanish)</a>
+<a href="/video-a-texto/" hreflang="es">Video to text (Spanish)</a>
+<a href="/en/about/" aria-current="page">About</a>
+<a href="/en/contact/">Contact</a>
+<a href="/en/privacy/">Privacy</a>
+<a href="/en/terms/">Terms</a></nav></footer>
+</body>
+</html>
